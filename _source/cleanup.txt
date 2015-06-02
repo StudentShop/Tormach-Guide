@@ -1,0 +1,19 @@
+Cleanup
+=======
+
+Clean up the machine using the following procdure after *every* use.
+
+---------
+Procedure
+---------
+
+1. On the :ref:`front control panel <ctrlpan>` turn the spindle lockout to "O".
+2. Remove the tools from the ATC or at least store the tool in the spindle
+3. Remove your part from your setup.Clean and return any clamps.
+4. Cleanup chips on machine.
+5. If :ref:`fogbuster <fog>` was used return it.
+6. If flood coolant or the fog buster were used wipe down (using rags and air hose) the machine and spray WD-40 on any exposed metal surface.
+7. Shake out the floor mat and sweep the floor. Wipe up any coolant.
+8. Remove tools from tool holders and return them
+9. Clean up workbench and desk.
+10. Have shop staff check the machine. Tell them about any problems or concerns with the machine.

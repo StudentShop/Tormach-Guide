@@ -1,0 +1,153 @@
+Troubleshooting
+***************
+
+.. _issue1:
+
+--------------------------------------
+Issue: The computer doesn’t turn on.
+--------------------------------------
+
+Solutions:
+Ask staff for assistance.
+
+.. _issue2:
+
+--------------------------------------------------------------------------------------------------------
+Issue: A dialog box says: “ATC: Unable to find ATC on USB ports. Reconnect USB cable Try Again?”
+--------------------------------------------------------------------------------------------------------
+
+Solutions:
+
+#. The machine has not been turned on. Deactivate the emergency stop and press the green start button. Click “OK” on the dialog screen.
+#. Ask staff for assistance.
+
+.. _issue3:
+
+------------------------------------------------------------
+Issue: A dialog box says: “Limit Switch Triggered”
+------------------------------------------------------------
+
+Solution:
+In the lower left of the screen click the red “Reset” button then, using the jog controller, carefully move the machine off of the limit switch. You will need to re-zero the machine. Follow steps 8 – 9 in the :doc:`machine startup </startup>` section of this guide.
+
+.. _issue4:
+
+-----------------------------------------------------------------
+Issue: A dialog box says: “ATC: OK to Reference Z now?”
+-----------------------------------------------------------------
+
+Solutions:
+The machine has hit a limit switch but the axes were not re-zeroed or the machine never had machine zeros set. Follow steps 7 – 8 in the Tormach Startup Guide.
+
+.. _issue5:
+
+----------------------------------------------------------------------
+Issue: The green light doesn’t come on when the probe is pressed on.
+----------------------------------------------------------------------
+
+Solutions:
+Disconnect and then reconnect the probe cable securely to the accessory port then try again. If the problem persists ask staff for assistance.
+
+.. _issue6:
+
+-------------------------------------------------------------------
+Issue: A dialog box says: "ATC: Warning spindle should be empty..."
+-------------------------------------------------------------------
+
+Solution:
+Check to make sure no tools are in the spindle. If a tool is in the spindle remove it then press "OK".
+
+.. warning:: Pressing "OK" when a tool is in the spindle will cause the machine to crash. Pressing the "x" in the upper right corner of the dialog box will have the same effect as pressing "OK".
+
+.. _issue7:
+
+--------------------------------------------------------------------
+Issue: The problem is not covered in the troubleshooting section
+--------------------------------------------------------------------
+
+Solution:
+See `shop staff <http://coestudentshop.engr.wisc.edu/about/staff.php>`_.
+
+.. _issue8:
+
+------------------------------------------------------------------------
+Issue: The Mach3 CNC Controller software crashed/was shutdown by mistake
+------------------------------------------------------------------------
+
+Solution:
+Double click the icon on the desktop labeled "Mach3".
+
+.. _issue9:
+
+--------------------------------------------------------------------------------------------
+Issue: A dialog box says: “ATC: Remove 99 from spindle Press OK when done or CANCEL to STOP”
+--------------------------------------------------------------------------------------------
+
+Solution:
+99 refers to the tool number of the :ref:`touch probe <probe>`. The machine is trying to do a tool change and thinks the probe is still in the spindle. If the probe is in the spindle remove it and then click "OK".
+
+.. warning:: No matter what button you click on this screen ("OK", "CANCEL", "x") the machine will attempt a tool change. If the probe is still in the spindle you will crash the machine and break the probe.
+
+.. _issue10:
+
+-----------------------------------------------------------
+Issue: A dialog box says: “ATC: Paused Hit OK to resume...”
+-----------------------------------------------------------
+
+Solution: Click the large red "RESET" button in the lower left hand side of the screen. Then reference the machine again following steps 8 & 9 in the :doc:`machine startup section <startup>`.
+
+.. _issue11:
+
+------------------------------------------------------------------
+After touching off the probe the red light on the probe remains on
+------------------------------------------------------------------
+
+Solution: Press on the probe a few times. Most likely the probe has gotten stuck. If this doesn't fix the problem see shop staff.
+
+.. _issue12:
+
+--------------------------------------------------------------------------------------
+A message is displayed next to the "RESET" button saying "Probe asked to move too far"
+--------------------------------------------------------------------------------------
+
+Solution: Move the probe within one inch of the surface to be probed and try again.
+
+.. _issue13:
+
+-----------------------------------------------------------------------------------------------------------------------
+A message is displayed next to the "RESET" button saying "\**** Face not found. Start too far away or Z not low enough"
+-----------------------------------------------------------------------------------------------------------------------
+
+Solution: The probe is either not below the surface of the part, the part isn't large enough (bigger than .400"), or the probe wasn't aligned with the center of the side of the part before probing. Correct any of the previously mentioned probelems and try again. If it still fails see shop staff.
+
+.. _issue14:
+
+----------------------------------------------------------------------------------------------------
+A message is displayed next to the "RESET" button saying "ATC Button - Tray in failure - retracting"
+----------------------------------------------------------------------------------------------------
+
+Solution: See shop staff.
+
+.. _issue15:
+
+-----------------------------------------------------------------------------------------
+A message is displayed next to the "RESET" button saying "ATC M6 - I\O operation failure"
+-----------------------------------------------------------------------------------------
+
+Solution: Press the "RESET" button twice and try again. If that doesn't work see shop staff.
+
+.. _issue16:
+
+---------------------------------------------------------------------------
+A message is displayed next to the "RESET" button saying "Tool not in tray"
+---------------------------------------------------------------------------
+
+Solution: The tool you requested is not in the ATC. Load the tool. If the tool is in the ATC see shop staff.
+
+.. _issue17:
+
+----------------------------------------------------------------------------------------------------
+After loading your G-code the machine jumps to a random line of code with your program name and M98
+----------------------------------------------------------------------------------------------------
+
+Solution: The Tormach post can not make use of macros. Turn off macros in your CAD software and regenerate your G-code.

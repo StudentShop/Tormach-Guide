@@ -1,0 +1,27 @@
+.. Tormach documentation master file, created by
+   sphinx-quickstart on Wed May 15 14:40:07 2013.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+**********************************
+Tormach PCNC1100 Quick Start Guide
+**********************************
+
+The Tormach PCNC1100 is a 4-axis computer numerical control (CNC) milling machine. This guide is designed to get an individual up and running on the machine in the minimum amount of time and with little training. For complete documentation see the :download:`machine specific guide </pdf/pcnc1100man.pdf>` provided by Tormach. The following instructions are intended to be followed in order.
+
+.. toctree::
+   :maxdepth: 2
+
+   gettingstarted
+   startup
+   loadingtools
+   locating
+   loadingprograms
+   runningprograms
+   aaxis
+   cleanup
+   shutdown
+   hazards
+   troubleshooting
+
+

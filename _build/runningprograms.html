@@ -1,0 +1,331 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Running Programs &mdash; Tormach 1.0 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Tormach 1.0 documentation" href="index.html"/>
+        <link rel="next" title="Using the A-axis" href="aaxis.html"/>
+        <link rel="prev" title="Loading Programs" href="loadingprograms.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="index.html" class="icon icon-home"> Tormach
+        
+
+        
+        </a>
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="gettingstarted.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="gettingstarted.html#overview">Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="gettingstarted.html#front-control-panel">Front Control Panel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gettingstarted.html#mach3-cnc-controller-software">Mach3 CNC Controller Software</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gettingstarted.html#jog-controller">Jog Controller</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gettingstarted.html#automatic-tool-changer-atc">Automatic Tool Changer (ATC)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gettingstarted.html#reference-tool">Reference Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gettingstarted.html#tool-setter-probe">Tool Setter Probe</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gettingstarted.html#touch-probe">Touch Probe</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gettingstarted.html#tool-holders">Tool Holders</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gettingstarted.html#a-axis">A Axis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gettingstarted.html#tailstock">Tailstock</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gettingstarted.html#c-collet-adapter">5C Collet Adapter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gettingstarted.html#fogbuster">Fogbuster</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="startup.html">Machine Startup</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="startup.html#procedure">Procedure</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="loadingtools.html">Setting Up Tools</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="loadingtools.html#loading-tools-into-tool-holders">Loading tools into tool holders</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loadingtools.html#loading-tools-into-the-atc-and-setting-tool-offsets">Loading tools into the ATC and setting tool offsets</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="locating.html">Locating Work</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="locating.html#setting-z">Setting Z</a></li>
+<li class="toctree-l2"><a class="reference internal" href="locating.html#finding-a-corner-on-square-stock">Finding a corner on Square Stock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="locating.html#finding-center-on-square-stock">Finding Center on Square Stock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="locating.html#finding-center-on-round-stock">Finding Center on Round Stock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="locating.html#finding-the-center-of-a-bore">Finding the center of a bore</a></li>
+<li class="toctree-l2"><a class="reference internal" href="locating.html#locating-unusually-shaped-work">Locating unusually shaped work</a></li>
+<li class="toctree-l2"><a class="reference internal" href="locating.html#reverse-engineering-work">Reverse engineering work</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="loadingprograms.html">Loading Programs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="loadingprograms.html#background">Background</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loadingprograms.html#generating-g-code">Generating G-Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loadingprograms.html#loading-g-code-files">Loading G-code files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loadingprograms.html#minimum-recognizable-g-code">Minimum Recognizable G-code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loadingprograms.html#manual-data-input-mdi">Manual Data Input (MDI)</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Running Programs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#preparation">Preparation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#running-a-program-for-the-first-time">Running a Program for the First Time</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#rerunning-a-program">Rerunning a Program</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="aaxis.html">Using the A-axis</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="aaxis.html#installing-the-a-axis">Installing the A-axis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aaxis.html#setup">Setup</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="cleanup.html">Cleanup</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cleanup.html#procedure">Procedure</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="shutdown.html">Shutdown</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="shutdown.html#procedure">Procedure</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="hazards.html">Hazards</a></li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#issue-the-computer-doesnt-turn-on">Issue: The computer doesn’t turn on.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#issue-a-dialog-box-says-atc-unable-to-find-atc-on-usb-ports-reconnect-usb-cable-try-again">Issue: A dialog box says: “ATC: Unable to find ATC on USB ports. Reconnect USB cable Try Again?”</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#issue-a-dialog-box-says-limit-switch-triggered">Issue: A dialog box says: “Limit Switch Triggered”</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#issue-a-dialog-box-says-atc-ok-to-reference-z-now">Issue: A dialog box says: “ATC: OK to Reference Z now?”</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#issue-the-green-light-doesnt-come-on-when-the-probe-is-pressed-on">Issue: The green light doesn’t come on when the probe is pressed on.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#issue-a-dialog-box-says-atc-warning-spindle-should-be-empty">Issue: A dialog box says: &#8220;ATC: Warning spindle should be empty...&#8221;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#issue-the-problem-is-not-covered-in-the-troubleshooting-section">Issue: The problem is not covered in the troubleshooting section</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#issue-the-mach3-cnc-controller-software-crashed-was-shutdown-by-mistake">Issue: The Mach3 CNC Controller software crashed/was shutdown by mistake</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#issue-a-dialog-box-says-atc-remove-99-from-spindle-press-ok-when-done-or-cancel-to-stop">Issue: A dialog box says: “ATC: Remove 99 from spindle Press OK when done or CANCEL to STOP”</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#issue-a-dialog-box-says-atc-paused-hit-ok-to-resume">Issue: A dialog box says: “ATC: Paused Hit OK to resume...”</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#after-touching-off-the-probe-the-red-light-on-the-probe-remains-on">After touching off the probe the red light on the probe remains on</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#a-message-is-displayed-next-to-the-reset-button-saying-probe-asked-to-move-too-far">A message is displayed next to the &#8220;RESET&#8221; button saying &#8220;Probe asked to move too far&#8221;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#a-message-is-displayed-next-to-the-reset-button-saying-face-not-found-start-too-far-away-or-z-not-low-enough">A message is displayed next to the &#8220;RESET&#8221; button saying &#8220;**** Face not found. Start too far away or Z not low enough&#8221;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#a-message-is-displayed-next-to-the-reset-button-saying-atc-button-tray-in-failure-retracting">A message is displayed next to the &#8220;RESET&#8221; button saying &#8220;ATC Button - Tray in failure - retracting&#8221;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#a-message-is-displayed-next-to-the-reset-button-saying-atc-m6-io-operation-failure">A message is displayed next to the &#8220;RESET&#8221; button saying &#8220;ATC M6 - IO operation failure&#8221;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#a-message-is-displayed-next-to-the-reset-button-saying-tool-not-in-tray">A message is displayed next to the &#8220;RESET&#8221; button saying &#8220;Tool not in tray&#8221;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#after-loading-your-g-code-the-machine-jumps-to-a-random-line-of-code-with-your-program-name-and-m98">After loading your G-code the machine jumps to a random line of code with your program name and M98</a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Tormach</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Running Programs</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/runningprograms.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="running-programs">
+<h1>Running Programs<a class="headerlink" href="#running-programs" title="Permalink to this headline">¶</a></h1>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">The first time a program is run there is a high risk of crashing the machine. Pay attention and be prepared to hit the emergency stop.</p>
+</div>
+<div class="section" id="preparation">
+<h2>Preparation<a class="headerlink" href="#preparation" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>Review the <a class="reference internal" href="hazards.html"><em>Hazards</em></a> section and make sure you&#8217;ve taken steps to avoid them.</li>
+<li>Double check that the machine has been referenced and that the machine zeros are set.</li>
+<li>Review the machining settings in your CAM software. Double check you chose the correct tools (types, diameters, &amp; lengths) and the correct feed and speed rates.</li>
+<li>Have an Instrument Maker verify your program.</li>
+<li>Double check that your set up is correct, the right tools are loaded into the ATC with the correct tool number and tool length offsets. Double check that all axes have been referenced.</li>
+<li>Double check that you&#8217;ve loaded the correct program.</li>
+<li>Check the <a class="reference internal" href="gettingstarted.html#ctrlpan"><span>front control panel</span></a>. The spindle lockout should be turned to &#8220;|&#8221;, The &#8220;Manual/Auto button should be switched to &#8220;Auto&#8221;.</li>
+<li>If flood coolant is to be used install the machine guards if not already done. Switch the coolant button on the front control button to &#8220;Auto&#8221;. Position the flood coolant nozzel and open its valve. If the <a class="reference internal" href="gettingstarted.html#fog"><span>fogbuster</span></a> is to be used, set it up now.</li>
+<li>Determine whether your program needs to be run in high or low gear. Go to the &#8220;Simple Run&#8221; screen by clicking the &#8220;Simple Run&#8221; button at the bottom of the screen. To the left of the black box and below the G-code viewer is a button labeled &#8220;Hi/Low&#8221;. Click the button to put it the machine in either high or low range. Belts will need to be changed in the head of the machine to match with the range chosen with the button. Have shop staff assist you with this.</li>
+<li>Read through the first 15 lines or so of your G-code. Make sure nothing looks surprising. See <a class="reference download internal" href="_downloads/gcode.pdf"><code class="xref download docutils literal"><span class="pre">example</span> <span class="pre">of</span> <span class="pre">valid</span> <span class="pre">G-code</span></code></a>.</li>
+<li>Go to the &#8220;Comp Run&#8221; screen by clicking the button labeled &#8220;Comp Run&#8221; at the bottom of the screen. Familiarize yourself with the various controls on this screen.</li>
+<li>If you have only run this machine a dozen times or so have an Instrument Maker with you when you run the program for the first time.</li>
+</ol>
+</div>
+<div class="section" id="running-a-program-for-the-first-time">
+<h2>Running a Program for the First Time<a class="headerlink" href="#running-a-program-for-the-first-time" title="Permalink to this headline">¶</a></h2>
+<div class="admonition caution">
+<p class="first admonition-title">Caution</p>
+<p class="last">This section is to be read in full before running a program. It is <em>not</em> a list of steps to be followed in order.</p>
+</div>
+<ol class="arabic simple">
+<li>The first time a program is run there is a very high probablity of there being bugs in it. As program complexity goes up so to does the number of potential bugs. The goal is to find and fix these bugs before they cause damage (e.g. crashing the machine). The first time a program is run it should be run in a wax part or, if this isn&#8217;t possible, it should be dry run in the air above the part (often refered to as &#8220;cutting air&#8221;).</li>
+<li>To run your part in the air set up the machine exactly as you would if you were going to be cutting the actual part (Z set to the top of the part, X &amp; Y found, etc.). Look in your CAD software and find the deepest cutting point in the program. Move the Z axis at least that amount above your part plus an inch (25mm). Write down the distance above the part and then zero the Z axis on the DRO. You can now run your program and it will only cut air. When you are ready to run your real part simply move the Z axis back down the distance you moved it up and zero the DRO again.</li>
+<li>To help catch problems when running a program for the first time run it in single block mode. Activate this mode by clicking the &#8220;Single BLK&#8221; button on the middle left side of the &#8220;Comp Run&#8221; screen. When in single block mode a small yellow indicator will flash next to the button. This will require the &#8220;Cycle Start&#8221; button (located two buttons above the &#8220;Single BLK&#8221; button) to be clicked for each line of G-code. This will allow you to step through your program one line at a time. You can move in and out of single block mode as necessary in your program. At the very least you should be in single block mode for a few lines after each tool change to make sure the speeds and feeds are reasonable and that the machine isn&#8217;t going to crash.</li>
+</ol>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The program can be paused at any time by clicking the &#8220;Feedhold&#8221; button located just below the &#8220;Single BLK&#8221; button or by pressing the space bar. Press &#8220;Cycle Start&#8221; to continue the program. Feedhold is not always instantaneous. If the machine is about to crash <em>always</em> use the emergency stop <em>never</em> feedhold.</p>
+</div>
+<div class="admonition caution">
+<p class="first admonition-title">Caution</p>
+<p class="last">If feedhold is activated while in single block mode, when &#8220;Cycle Start&#8221; is pressed the machine will no longer be in single block mode <em>even though the blinking light indicates it is</em>. You will need to turn off single block and then turn it back on again.</p>
+</div>
+<ol class="arabic simple" start="4">
+<li>Often when running a program for the first time you will need to override the speeds and feeds set in your program. Speed and feed override controls can be found on middle and lower right side of the screen. Look for a capital letter &#8220;S&#8221; or &#8220;F&#8221; and a coresponding text box. The desired speed and feed can be entered in these text boxes while the program is running.</li>
+</ol>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The speed controls in the <a class="reference internal" href="gettingstarted.html#mach3"><span>Mach3 software</span></a> only work if the switch on the <a class="reference internal" href="gettingstarted.html#ctrlpan"><span>front control panel</span></a> to the right of the silver RPM adjustment knob is switched to &#8220;Auto&#8221;.</p>
+</div>
+<ol class="arabic simple" start="5">
+<li>After each M06 (tool change) in your program pause the tool as it&#8217;s moving down by pressing the space bar, activating the feedhold. Double check to make sure that the numbers on the DRO, in your program, and in reality all roughly match. Use a tape measure to check if the bottom of the tool is the correct distance from your part. If the tool is not the correct distance from the part stop the program and debug it (don&#8217;t forget, shop staff can help you debug the program).</li>
+</ol>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Feedhold has a couple second delay. If you need to stop the machine instantly use the e-stop. If the e-stop is pressed don&#8217;t forget to re-reference the Z axis.</p>
+</div>
+<ol class="arabic simple" start="6">
+<li>As your program runs make notes about things that you might want to change (e.g. feeds, speeds, inefficient tool paths, etc.). When the program finishes return to your CAM software and make the changes.</li>
+</ol>
+</div>
+<div class="section" id="rerunning-a-program">
+<h2>Rerunning a Program<a class="headerlink" href="#rerunning-a-program" title="Permalink to this headline">¶</a></h2>
+<p>If your program has been changed since the first time you ran it, no matter how small the change, redo the above steps as though this is the first time you&#8217;ve run this program (because it is).</p>
+<p>If the program has not changed, install a new piece of stock and indicate it in following the steps outlined under <a class="reference internal" href="locating.html"><em>Locating Work</em></a>. If work stops are used in the setup not all coordinates will need to be indicated again. When the program finished it should have rewound back to the start of the program (if it didn&#8217;t, click the &#8220;Program Reset&#8221; button on the middle left side of the screen). Single block mode can be turned off and you can now click &#8220;Cycle Start&#8221;.</p>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="aaxis.html" class="btn btn-neutral float-right" title="Using the A-axis" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="loadingprograms.html" class="btn btn-neutral" title="Loading Programs" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2013, Board of Regents of the University of Wisconsin System.
+      Last updated on Jun 02, 2015.
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

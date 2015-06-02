@@ -1,0 +1,201 @@
+Locating Work
+*************
+
+There are a variety of methods that can be used to locate work on the Tormach. The primary method will be using the touch probe. Other methods will not be covered in this guide.
+
+.. warning:: The touch probe is ceramic and easily broken. Handle the probe carefully and, when in the machine, move it slowly using the jog controller.
+
+---------
+Setting Z
+---------
+
+.. caution:: :ref:`Setting tool offsets <toollength>` should be done before locating the work.
+
+1. If you have not already done so, set up your work.
+2. Go to the ATC screen by clicking the "ATC" button at the bottom of the screen.
+3. Check to make sure that the spindle lockout on the :ref:`front control panel <ctrlpan>` is turned to the "O" position.
+4. In the upper right hand corner, in the text box to the left of the "fetch" & "remove" buttons enter number "99", press enter on the keyboard, and then click the "fetch" button. If a tool is in the spindle it will be removed from the spindle and stored in the :ref:`ATC <atc>`; a dialog box will appear saying "ATC: Insert 99 in spindle OK to continue or CANCEL to STOP". If no tool is in the spindle it will go directly to the above mentioned dialog box.
+
+.. warning:: The touch probe *must* be set as Tool 99; another number can *not* be used.
+
+5. Click "OK" on the dialog screen saying to insert tool 99. The text box below "Tool Currently in Spindle" should now read "99".
+6. Take the :ref:`touch probe <probe>` out of its case and connect the cord to the probe. Insert the probe into the spindle and plug in the cord to the accessory port on the front control panel.
+7. With your finger, press on the probe tip and check that a green box lights up next to “Test Probe Before Move” on the lower right of the screen. A red light will also come on on the probe. If the lights don’t come on or stays on see the :ref:`troubleshooting section <issue5>`.
+8. Go to the "Simple Run" screen by clicking the button at the bottom of the screen that says "Simple Run". In the upper right corner, above the black box, is a text box labeled "Slow Jog Rate". Enter "25" into the text box and press enter.
+9. Go to the Z probe screen by clicking the button at the bottom of the screen that says “Z Probe”.
+10. Using the :ref:`jog controller <jogctrl>` bring the probe within an inch (25mm) of the surface you wish to set as your "Z" (This must be the same location as choosen in your CAM software. Normally this is the top of your workpiece).
+11. In the picture of the touch probe on the left side of the screen, click the button that says "Move & Set Work Offset" (see image below). The probe will now move and touch off the work, then set the spot it touched as z workoffset zero. The DRO will not read zero as the probe has moved slightly off of the probed surface.
+
+.. image:: images/probescreenoffset.jpg
+
+.. image:: images/zprobescreenno.jpg
+
+.. note:: This zero is not the same as the machine zeros set when the axes were referenced during the :ref:`startup procedure <startupprocedure>`. Technically it is a work offset from machine zero. This can be seen in the fixtures table.
+
+12. If X & Y need to be found as well, procede to step 9 in the following relevant section otherwise go back to the ATC screen by clicking the "ATC" button at the bottom of the screen.
+13. Remove the probe from the accessory port and spindle and put it away.
+14. If the ATC had tools in it before the touch probe was inserted, the first time the machine tries to fetch a tool it will display a dialog box saying "ATC: Remove 99 from spindle Press OK when done or CANCEL to STOP". If the probe has been removed, click the "OK" button.
+
+.. warning:: Never press the "Store" button when the touch probe is in the machine. This will cause the machine to crash and will break the probe.
+
+15. Go to the "Simple Run" screen by clicking the button at the bottom of the screen that says "Simple Run". In the upper right corner, above the black box, is a text box labeled "Slow Jog Rate". Enter "100" into the text box and press enter.
+
+--------------------------------
+Finding a corner on Square Stock
+--------------------------------
+
+.. caution:: :ref:`Setting tool offsets <toollength>` should be done before locating the work.
+
+1. If you have not already done so, set up your work.
+2. Go to the ATC screen by clicking the "ATC" button at the bottom of the screen.
+3. Check to make sure that the spindle lockout on the :ref:`front control panel <ctrlpan>` is turned to the "O" position.
+4. In the upper right hand corner, in the text box to the left of the "fetch" & "remove" buttons enter number "99", press enter on the keyboard, and then click the "fetch" button. If a tool is in the spindle it will be removed from the spindle and stored in the :ref:`ATC <atc>`; a dialog box will appear saying "ATC: Insert 99 in spindle OK to continue or CANCEL to STOP". If no tool is in the spindle it will go directly to the above mentioned dialog box.
+
+.. warning:: The touch probe *must* be set as Tool 99; another number can *not* be used.
+
+5. Click "OK" on the dialog screen saying to insert tool 99. The text box below "Tool Currently in Spindle" should now read "99".
+6. Take the :ref:`touch probe <probe>` out of its case and connect the cord to the probe. Insert the probe into the spindle and plug in the cord to the accessory port on the front control panel.
+7. With your finger, press on the probe tip and check that a green box lights up next to “Test Probe Before Move” on the lower right of the screen. A red light will also come on on the probe. If the lights don’t come on or stays on see the :ref:`troubleshooting section <issue5>`.
+8. Go to the "Simple Run" screen by clicking the button at the bottom of the screen that says "Simple Run". In the upper right corner, above the black box, is a text box labeled "Slow Jog Rate". Enter "25" into the text box and press enter.
+9. Go to the X/Y probe screen by clicking the button at the bottom of the screen that says “X/Y Probe”.
+10. Using the :ref:`jog controller <jogctrl>` bring the probe within an inch (25mm) of the surface you wish to set as your "X" or "Y" (This must be the same location as chosen in your CAM software) and deep enough for the probe to touch on its equator.
+11. Make sure the "Set X AND Y" button is turned off (a yellow light on the button will blink if it is on). If the button is turned on the probe will both set X and Y to zero wherever the probe touches. Normally X and Y should be zeroed at different locations (e.g. left face and front face).
+12. In the picture of the touch probe on the left side of the screen, click the button that matches the coordinate and direction the probe should move in to find the surface (see image below). The probe will now move and touch off the work, then set the spot it touched as zero. The DRO will not read zero as the probe has moved slightly off of the probed surface. Repeat this process for the other axis you want to zero.
+
+.. figure:: images/xyprobescreenoffset.jpg
+   :align: center
+
+.. note:: This zero is not the same as the machine zeros set when the axes were referenced during the :ref:`startup procedure <startupprocedure>`. Technically it is a work offset from machine zero. This can be seen in the fixtures table.
+
+13. If Z needs to be found as well, procede to step 9 in the previous section otherwise go back to the ATC screen by clicking the "ATC" button at the bottom of the screen.
+14. Remove the probe from the accessory port and spindle and put it away.
+15. If the ATC had tools in it before the touch probe was inserted, the first time it tries to fetch a tool it will display a dialog box saying "ATC: Remove 99 from spindle Press OK when done or CANCEL to STOP". If the probe has been removed, click the "OK" button.
+
+.. warning:: Never press the "Store" button when the touch probe is in the machine. This will cause the machine to crash and will break the probe.
+
+16. Go to the "Simple Run" screen by clicking the button at the bottom of the screen that says "Simple Run". In the upper right corner, above the black box, is a text box labeled "Slow Jog Rate". Enter "100" into the text box and press enter.
+
+------------------------------
+Finding Center on Square Stock
+------------------------------
+
+.. caution:: :ref:`Setting tool offsets <toollength>` should be done before locating the work.
+
+1. If you have not already done so, set up your work.
+2. Go to the ATC screen by clicking the "ATC" button at the bottom of the screen.
+3. Check to make sure that the spindle lockout on the :ref:`front control panel <ctrlpan>` is turned to the "O" position.
+4. In the upper right hand corner, in the text box to the left of the "fetch" & "remove" buttons enter number "99", press enter on the keyboard, and then click the "fetch" button. If a tool is in the spindle it will be removed from the spindle and stored in the :ref:`ATC <atc>`; a dialog box will appear saying "ATC: Insert 99 in spindle OK to continue or CANCEL to STOP". If no tool is in the spindle it will go directly to the above mentioned dialog box.
+
+.. warning:: The touch probe *must* be set as Tool 99; another number can *not* be used.
+
+5. Click "OK" on the dialog screen saying to insert tool 99. The text box below "Tool Currently in Spindle" should now read "99".
+6. Take the :ref:`touch probe <probe>` out of its case and connect the cord to the probe. Insert the probe into the spindle and plug in the cord to the accessory port on the front control panel.
+7. With your finger, press on the probe tip and check that a green box lights up next to “Test Probe Before Move” on the lower right of the screen. A red light will also come on on the probe. If the lights don’t come on or stays on see the :ref:`troubleshooting section <issue5>`.
+8. Go to the "Simple Run" screen by clicking the button at the bottom of the screen that says "Simple Run". In the upper right corner, above the black box, is a text box labeled "Slow Jog Rate". Enter "25" into the text box and press enter.
+9. Go to the X/Y probe screen by clicking the button at the bottom of the screen that says “X/Y Probe”.
+10. Using the :ref:`jog controller <jogctrl>` bring the probe within an inch (25mm) of the left side of your part and deep enough for the probe to touch on its equator.
+11. Make sure the "Set X AND Y" button is turned off (a yellow light on the button will blink if it is on). If the button is turned on the probe will both set X and Y to zero wherever the probe touches. X and Y should be zeroed at different locations (i.e. left face and front face).
+12. In the picture of the touch probe on the left side of the screen, click the button that matches the coordinate and direction the probe should move in to find the surface (see image below). The probe will now move and touch off the work, then set the spot it touched as zero. The DRO will not read zero as the probe has moved slightly off of the probed surface. Repeat this process for the front side of the part.
+
+.. figure:: images/xyprobescreenoffset.jpg
+   :align: center
+
+.. note:: This zero is not the same as the machine zeros set when the axes were referenced during the :ref:`startup procedure <startupprocedure>`. Technically it is a work offset from machine zero. This can be seen in the fixtures table.
+
+13. Your part now has zero set in the lower left hand corner of the part. Measure the length and width of your part, then divide each number by two.
+14. Using the jog controller move the probe above the part and then to the numbers in X and Y found in the previous step.
+15. Visually check that the probe is approximately in the center of the part. Return to the "Simple Run" screen by clicking the button at the bottom of the screen. Click the "Zero" button on the X and Y axis to the left of the DRO on the upper half of the screen.
+16. If Z needs to be found as well, procede to step 9 in the previous section otherwise go back to the ATC screen by clicking the "ATC" button at the bottom of the screen.
+17. Remove the probe from the accessory port and spindle and put it away.
+18. If the ATC had tools in it before the touch probe was inserted, the first time it tries to fetch a tool it will display a dialog box saying "ATC: Remove 99 from spindle Press OK when done or CANCEL to STOP". If the probe has been removed, click the "OK" button.
+
+.. warning:: Never press the "Store" button when the touch probe is in the machine. This will cause the machine to crash and will break the probe.
+
+19. Go to the "Simple Run" screen by clicking the button at the bottom of the screen that says "Simple Run". In the upper right corner, above the black box, is a text box labeled "Slow Jog Rate". Enter "100" into the text box and press enter.
+
+-----------------------------
+Finding Center on Round Stock
+-----------------------------
+
+.. caution:: :ref:`Setting tool offsets <toollength>` should be done before locating the work.
+
+1. If you have not already done so, set up your work.
+2. Go to the ATC screen by clicking the "ATC" button at the bottom of the screen.
+3. Check to make sure that the spindle lockout on the :ref:`front control panel <ctrlpan>` is turned to the "O" position.
+4. In the upper right hand corner, in the text box to the left of the "fetch" & "remove" buttons enter number "99", press enter on the keyboard, and then click the "fetch" button. If a tool is in the spindle it will be removed from the spindle and stored in the :ref:`ATC <atc>`; a dialog box will appear saying "ATC: Insert 99 in spindle OK to continue or CANCEL to STOP". If no tool is in the spindle it will go directly to the above mentioned dialog box.
+
+.. warning:: The touch probe *must* be set as Tool 99; another number can *not* be used.
+
+5. Click "OK" on the dialog screen saying to insert tool 99. The text box below "Tool Currently in Spindle" should now read "99".
+6. Take the :ref:`touch probe <probe>` out of its case and connect the cord to the probe. Insert the probe into the spindle and plug in the cord to the accessory port on the front control panel.
+7. With your finger, press on the probe tip and check that a green box lights up next to “Test Probe Before Move” on the lower right of the screen. A red light will also come on on the probe. If the lights don’t come on or stays on see the :ref:`troubleshooting section <issue5>`.
+8. Go to the "Simple Run" screen by clicking the button at the bottom of the screen that says "Simple Run". In the upper right corner, above the black box, is a text box labeled "Slow Jog Rate". Enter "25" into the text box and press enter
+9. Go to the X/Y probe screen by clicking the button at the bottom of the screen that says “X/Y Probe”.
+10. In the middle of the screen between the two images, click the button labeled "Comp Probing".
+11. In the middle of the "Comp Probing" screen beneath the "Probed Points" heading click the "Select 1" button.
+12. Move the probe ~1/2" (12.5mm) to the left of the part (negative X) and, by jogging in the Y axis, align the probe with the center of the part. Next move the probe so that the equator of the probe tip is just below the top of the part.
+13. On the left side of the screen click the yellow box with an "X" and an arrow pointing to the right. The probe will now move, touch the part then move Y -.200" touch, and Y+.200" and touch. It will record the numbers for the probed surface above the "Select 1" button. If the probe misses the part see the :ref:`troubleshooting section <issue13>`.
+14. Beneath the "Probed Points" heading click the "Select 2" button.
+15. Move the probe ~1/2" (12.5mm) to the back of the part (positive Y) and, by jogging in the X axis, align the probe with the center of the part. Next move the probe so that the widest part of the probe tip is just below the top of the part.
+16. On the left side of the screen click the yellow box with a "Y" and an arrow pointing down. The probe will now move, touch the part then move X-.200" touch, and X+.200" and touch. It will record the numbers for the probed surface above the "Select 2" button. If the probe misses the part see the :ref:`troubleshooting section <issue13>`.
+17. Beneath the "Probed Points" heading click the "Select 3" button.
+18. Move the probe ~1/2" (12.5mm) to the right of the part (positive X) and, by jogging in the Y axis, align the probe with the center of the part. Next move the probe so that the widest part of the probe tip is just below the top of the part.
+19. On the left side of the screen click the yellow box with an "X" and an arrow pointing to the left. The probe will now move, touch the part then move Y-.200" touch, and Y+.200" and touch. It will record the numbers for the probed surface above the "Select 3" button. If the probe misses the part see the :ref:`troubleshooting section <issue13>`.
+20. In the upper right side of the screen, in the image of a circle, click the "Orgin is center" button. The machine will calculate the center of the part from the 3 probed surfaces.
+21. Raise the probe above the part. Using the jog controller move the probe to X0, Y0. The probe should be above the center of the part. If it isn't repeat the above steps.
+
+.. note:: These zeros are not the same as the machine zeros set when the axes were referenced during the :ref:`startup procedure <startupprocedure>`. Technically it is a work offset from machine zero. This can be seen in the fixtures table.
+
+22. If Z needs to be found as well, procede to step 9 in the above section otherwise go back to the ATC screen by clicking the "ATC" button at the bottom of the screen.
+23. Remove the probe from the accessory port and spindle and put it away.
+24. If the ATC had tools in it before the touch probe was inserted, the first time it tries to fetch a tool it will display a dialog box saying "ATC: Remove 99 from spindle Press OK when done or CANCEL to STOP". If the probe has been removed, click the "OK" button.
+
+.. warning:: Never press the "Store" button when the touch probe is in the machine. This will cause the machine to crash and will break the probe.
+
+25. Go to the "Simple Run" screen by clicking the button at the bottom of the screen that says "Simple Run". In the upper right corner, above the black box, is a text box labeled "Slow Jog Rate". Enter "100" into the text box and press enter.
+
+----------------------------
+Finding the center of a bore
+----------------------------
+
+.. caution:: :ref:`Setting tool offsets <toollength>` should be done before locating the work.
+
+1. If you have not already done so, set up your work.
+2. Go to the ATC screen by clicking the "ATC" button at the bottom of the screen.
+3. Check to make sure that the spindle lockout on the :ref:`front control panel <ctrlpan>` is turned to the "O" position.
+4. In the upper right hand corner, in the text box to the left of the "fetch" & "remove" buttons enter number "99", press enter on the keyboard, and then click the "fetch" button. If a tool is in the spindle it will be removed from the spindle and stored in the :ref:`ATC <atc>`; a dialog box will appear saying "ATC: Insert 99 in spindle OK to continue or CANCEL to STOP". If no tool is in the spindle it will go directly to the above mentioned dialog box.
+
+.. warning:: The touch probe *must* be set as Tool 99; another number can *not* be used.
+
+5. Click "OK" on the dialog screen saying to insert tool 99. The text box below "Tool Currently in Spindle" should now read "99".
+6. Take the :ref:`touch probe <probe>` out of its case and connect the cord to the probe. Insert the probe into the spindle and plug in the cord to the accessory port on the front control panel.
+7. With your finger, press on the probe tip and check that a green box lights up next to “Test Probe Before Move” on the lower right of the screen. A red light will also come on on the probe. If the lights don’t come on or stays on see the :ref:`troubleshooting section <issue5>`.
+8. Go to the "Simple Run" screen by clicking the button at the bottom of the screen that says "Simple Run". In the upper right corner, above the black box, is a text box labeled "Slow Jog Rate". Enter "25" into the text box and press enter.
+9. Go to the X/Y probe screen by clicking the button at the bottom of the screen that says “X/Y Probe”.
+10. Using the :ref:`jog controller <jogctrl>` bring the probe to roughly the center of the bore and deep enough into the bore that the probe tip can contact the sides.
+11. In the picture of the probe in a bore on the upper right side of the screen, click the button that says "Find center & Set work orgin" (see image below). The probe will now move and touch off at points inside the work, then calculate the center and set it as zero for both X & Y coordinates.
+
+.. figure:: images/xyprobescreenbore.jpg
+   :align: center
+
+.. note:: These zeros are not the same as the machine zeros set when the axes were referenced during the :ref:`startup procedure <startupprocedure>`. Technically it is a work offset from machine zero. This can be seen in the fixtures table.
+
+12. If Z needs to be found as well, procede to step 9 in the above section otherwise go back to the ATC screen by clicking the "ATC" button at the bottom of the screen.
+13. Remove the probe from the accessory port and spindle and put it away.
+14. If the ATC had tools in it before the touch probe was inserted, the first time it tries to fetch a tool it will display a dialog box saying "ATC: Remove 99 from spindle Press OK when done or CANCEL to STOP". If the probe has been removed, click the "OK" button.
+
+.. warning:: Never press the "Store" button when the touch probe is in the machine. This will cause the machine to crash and will break the probe.
+
+15. Go to the "Simple Run" screen by clicking the button at the bottom of the screen that says "Simple Run". In the upper right corner, above the black box, is a text box labeled "Slow Jog Rate". Enter "100" into the text box and press enter.
+
+------------------------------
+Locating unusually shaped work
+------------------------------
+
+See `shop staff <http://coestudentshop.engr.wisc.edu/about/staff.php>`_ for assistance.
+
+------------------------
+Reverse engineering work
+------------------------
+
+See `shop staff <http://coestudentshop.engr.wisc.edu/about/staff.php>`_ for assistance.

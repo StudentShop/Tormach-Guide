@@ -1,0 +1,49 @@
+Setting Up Tools
+****************
+
+The Tormach has a variety of methods for holding tools. It is currently set up to work with the :ref:`ATC <atc>` and thus can only use :ref:`TTS holders <toolholder>`.
+
+-------------------------------
+Loading tools into tool holders
+-------------------------------
+
+Before loading tools read and understand the :download:`TTS Manual </pdf/ttsman.pdf>`. Tooling over 1/2" (12.5mm) in diameter is to be avoided as it has a high probability of pulling out of the machine.
+
+Before loading tools make sure to check that the tools are sharp. Measure the cutting diameters as well (If they've been resharpened the size on the label will be wrong).
+
+.. _toollength:
+
+---------------------------------------------------
+Loading tools into the ATC and setting tool offsets
+---------------------------------------------------
+
+1. Go to the "ATC" screen by clicking the "ATC" button at the bottom of the screen. Do not click the "ATC Setup" button.
+2. Ensure the ATC (Automatic Tool Changer) is empty. If there are tools in the ATC you can remove them by entering the tool number to remove in the text box in the upper right hand side of the screen under the "Automatic Load/Unload" heading, pressing enter on the keyboard, and clicking the "Remove" button. The machine will store any tool currently in the spindle and then fetch the tool to remove. A dialog box will appear saying "Remove tool from spindle". Using the :ref:`black control box <atc>` remove the tool from the spindle and then press "OK" on the dialog box. If any other dialog box appears see the :doc:`troubleshooting section <troubleshooting>`
+
+.. note:: Most CAM software lets you print out a copy of your tool list. You should do this and have it on hand for the remaining steps.
+
+3. Tool numbers in your CNC program must match exactly with their numbers in the ATC (although technically the order in the ATC is irrelevant, e.g. 1,3,4,2, it is almost always most efficient to insert the tools in the same order they are used in your CNC program e.g. 1,2,3,4,5,6).
+4. Select a tool and insert it into the spindle, making sure the tool holder is clean and seated firmly against the spindle collet. Enter the tool’s number as it is in your CNC program in the box to the left of the "Store" button by clicking in the box, typing the number and then pressing "enter" on the keyboard; then press the "Store" button. The machine will now move and store the tool currently in the spindle in the :ref:`ATC <atc>` and label it with the number you provided. Repeat this process with your remaining tools. The tool changer will automatically index to the next open space in the carousel. If a dialog box appears asking to reference the z axis see the :ref:`troubleshooting section <issue4>`.
+
+.. warning:: Tool lengths and tool numbers must match *exactly* with the tool lengths and numbers set in your program.
+
+5. Ensure that the screen says that tool number "0" is currently in the spindle. If another tool is in the spindle enter "0" into the left of the "Fetch" & "Remove" buttons and then press "Fetch".
+6. The machine needs to know how long its tools are. Insert the :ref:`reference tool <reftool>` into the spindle using the :ref:`black control box <atc>`, making sure the tool holder is clean and seated firmly against the spindle collet.
+7. Get the :ref:`tool setter probe <toolset>`. Making sure the table and bottom of probe are clean, place the probe on the machine table approximately below the spindle and plug its cord into the accessory port located on the machine's front control panel.
+8. With your finger, press on the probe surface and check that a green box lights up next to "Test Probe Before Move" on the lower right of the screen. A red light will also come on on the base of the probe. If the lights don't come on see the :ref:`troubleshooting section <issue5>`.
+9. Go to the "Simple Run" screen by clicking the button at the bottom of the screen that says "Simple Run". In the upper right corner, above the black box, is a text box labeled "Slow Jog Rate". Enter "25" into the text box and press enter.
+10. Using the :ref:`jog controller <jogctrl>` move the Z axis in the negative direction to roughly one inch above the center of the probe’s surface then align the reference tool with the center of the probe either by moving the probe or the table (Limit switch triggered? See :ref:`troubleshooting <issue3>`).
+
+.. image:: /images/probescreenno.jpg
+
+.. image:: /images/zprobeworkoffset.jpg
+ 
+11. Go to the "Z Probe" screen by clicking the button at the bottom of the screen that says "Z Probe". Once there, click the button that says "Setup Work Offset" in the right hand image of the tool setter probe (see image below). The Z axis will now move, touch off of the probe, and set the z work offset to zero (the DRO won't read zero because the probe has moved just off of the surface and accounted for the probe height). Do not move the probe after setting the offset.
+
+12. Move the Z axis away from the probe in the positive z direction and remove the reference tool from the spindle.
+13. Go to the "ATC" screen by clicking the "ATC" button at the bottom of the screen. Ensure that the tool setter probe has not moved since step 10 (if it has, reposition it beneath the spindle). Then click the "Touch Off Entire Tray" button in the lower right hand side of the screen. The machine will now move and touch off all of the tools in the ATC and set their lengths in the tool table. If a dialog box appears see the :doc:`troubleshooting section <troubleshooting>`.
+14. Put the tool setter probe away.
+15. In the top left hand corner of the screen select the "Config" drop down menu and click "ToolTable.....". Name all of your tools (e.g. "Ball Endmill") and input their diameters. The "Height" field should already have values set from step 13. Once finished click "Apply" and the "OK". If you accidentally change the "Height" value press "OK" without clicking "Apply". This will reset any values back to what they were since the last time "Apply" was clicked. If you already clicked "Apply" the only way to get the correct values is to repeat step 13. With the exeption of tool 99 delete any tools in the table that are not part of your program.
+16. Double check that the tools are set correctly. With a tool in the spindle, using the jog controller and the DRO (Available by clicking the "Simple Run" button at the bottom of the screen) as a guide, move the Z axis until the tool is roughly one inch above the table of the machine (use a 1" parallel for reference next to the tool *not* under the tool). If it looks to be about one inch above the table then the tools' lengths have probably been set correctly. If it is not an inch away repeat the process from step 1. Only one tool needs to be checked because all tool lengths will be checked again later when the program is run for the first time.
+17. Go to the "Simple Run" screen by clicking the button at the bottom of the screen that says "Simple Run". In the upper right corner, above the black box, is a text box labeled "Slow Jog Rate". Enter "100" into the text box and press enter.
+18. Your tools should now be properly set.

@@ -1,0 +1,20 @@
+Hazards
+*******
+
+The following are a list of known problems that could cause the machine to crash or otherwise not function correctly.
+
+The A-axis can be crashed into the front control box unless it is put in the t-slot closest to the front of the machine.
+
+When using the A-axis with a tailstock it is possible for tooling to crash into the tailstock when the ATC rotates.
+
+The A-axis must be installed on the right side of the machine to avoid crashes with tooling in the ATC.
+
+Large tools can pull out of collets
+
+tools can be loaded into the collet incorrectly, especially the reference tool, effecting tool length
+
+Probes must be calibrated in the correct order
+1. insert ref tool, set sensor height of tool setter
+2. set work offset to zero using tool setter
+3. insert tool 99, set tool length
+4. test

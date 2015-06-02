@@ -1,0 +1,28 @@
+Machine Startup
+***************
+
+.. caution:: A number of the operations in the procedure below will cause the machine to move automatically. If for any reason the machine starts to do something unintended hit the large red emergency stop button on the front control panel.
+
+.. _startupprocedure:
+
+---------
+Procedure
+---------
+
+1. Rotate the main power switch, the red and yellow rotary switch on the side of the machine to the on position.
+2. On the :ref:`front control panel <ctrlpan>` flip the computer switch to the on position.
+3. Ensure that the other switches on the front control panel are in a sensible position (e.g. the coolant switch isn’t turned on).
+4. Deactivate the emergency stop button by twisting to the right and pulling then press the green start button.
+5. The computer and control software should be loaded and waiting.
+6. A dialog box will appear and ask “ATC: OK to RESET?”  Click “Yes” in the dialog box. If the dialog box does not show this see :ref:`Troubleshooting <issue2>`.
+7. A dialog box will appear and ask “ATC: OK to Reference Z now?” Make sure the Z-axis is clear to move and then click “Yes” in the dialog box. The Z-axis will now reference itself by moving to its positive limit switch.
+8. Go to the “Comp Run” screen by clicking the button labeled “Comp Run” at the bottom of the screen then click the “Ref XYZ” button near the DRO (digital readout) above the large black box. All three axes will now move. Y and Z will move in the positive direction to the limit switches, X will move in the negative direction to the limit switch.
+
+.. caution:: Do not click “Ref A”. When the button is clicked the A axis will rotate infinitely. If you do click the button by mistake press the “esc” key on the keyboard. “Ref A” assumes a limit switch is connected which it isn’t.
+
+9. If the :ref:`4th axis rotary table (A axis) <axis>` is connected it also needs to have a zero and correction radius set. Using the :ref:`jog controller <jogctrl>` rotate the A-axis to the zero position on the graduated markings on the axis itself, not on the DRO. Then click the “Zero” button for the A axis DRO (Digital Readout). Below the "Zero" button for the A-axis is a text box labeled "A correction radius". Enter the radius of your part in this box and hit enter. If you need to install the A axis see the section titled :doc:`Installing the A axis <aaxis>`.
+10. In order to engage the spindle you will need to get the spindle lockout key from shop staff. The lockout key is inserted on the machine’s front control panel.
+11. The machine is now ready for use.
+12. It is a good idea at this point to practice moving the axes with the :ref:`jog controller <jogctrl>`. To move away from the stops move in the negative y & z directions and the positive x direction. The controller can be turned off or have its top speed reduced if necessary. The jog on/off control can be found in the upper right hand corner of the "Simple Run" and "Comp Run" screens. Slightly below that button is a text box labeled "Slow Jog Rate". Typing in a lower percent of top speed will limit the jog controller to that percent top speed.
+
+.. warning:: If at any point you hit one of the limit switches when using the jog controller all of your machine zeros will be lost. This is also the case if the emergency stop button or "RESET" buttons are pressed. You will have to click the reset button, move the machine off of the limit switch and then repeat the above steps. Running the machine without machine zeros being set can cause the machine to crash.

@@ -1,0 +1,51 @@
+Running Programs
+****************
+
+.. warning:: The first time a program is run there is a high risk of crashing the machine. Pay attention and be prepared to hit the emergency stop.
+
+-----------
+Preparation
+-----------
+1. Review the :doc:`Hazards <hazards>` section and make sure you've taken steps to avoid them.
+#. Double check that the machine has been referenced and that the machine zeros are set.
+#. Review the machining settings in your CAM software. Double check you chose the correct tools (types, diameters, & lengths) and the correct feed and speed rates.
+#. Have an Instrument Maker verify your program.
+#. Double check that your set up is correct, the right tools are loaded into the ATC with the correct tool number and tool length offsets. Double check that all axes have been referenced.
+#. Double check that you've loaded the correct program.
+#. Check the :ref:`front control panel <ctrlpan>`. The spindle lockout should be turned to "|", The "Manual/Auto button should be switched to "Auto".
+#. If flood coolant is to be used install the machine guards if not already done. Switch the coolant button on the front control button to "Auto". Position the flood coolant nozzel and open its valve. If the :ref:`fogbuster <fog>` is to be used, set it up now.
+#. Determine whether your program needs to be run in high or low gear. Go to the "Simple Run" screen by clicking the "Simple Run" button at the bottom of the screen. To the left of the black box and below the G-code viewer is a button labeled "Hi/Low". Click the button to put it the machine in either high or low range. Belts will need to be changed in the head of the machine to match with the range chosen with the button. Have shop staff assist you with this.
+#. Read through the first 15 lines or so of your G-code. Make sure nothing looks surprising. See :download:`example of valid G-code </pdf/gcode.pdf>`.
+#. Go to the "Comp Run" screen by clicking the button labeled "Comp Run" at the bottom of the screen. Familiarize yourself with the various controls on this screen.
+#. If you have only run this machine a dozen times or so have an Instrument Maker with you when you run the program for the first time.
+
+------------------------------------
+Running a Program for the First Time
+------------------------------------
+
+.. caution:: This section is to be read in full before running a program. It is *not* a list of steps to be followed in order.
+
+1. The first time a program is run there is a very high probablity of there being bugs in it. As program complexity goes up so to does the number of potential bugs. The goal is to find and fix these bugs before they cause damage (e.g. crashing the machine). The first time a program is run it should be run in a wax part or, if this isn't possible, it should be dry run in the air above the part (often refered to as "cutting air").
+2. To run your part in the air set up the machine exactly as you would if you were going to be cutting the actual part (Z set to the top of the part, X & Y found, etc.). Look in your CAD software and find the deepest cutting point in the program. Move the Z axis at least that amount above your part plus an inch (25mm). Write down the distance above the part and then zero the Z axis on the DRO. You can now run your program and it will only cut air. When you are ready to run your real part simply move the Z axis back down the distance you moved it up and zero the DRO again.
+3. To help catch problems when running a program for the first time run it in single block mode. Activate this mode by clicking the "Single BLK" button on the middle left side of the "Comp Run" screen. When in single block mode a small yellow indicator will flash next to the button. This will require the "Cycle Start" button (located two buttons above the "Single BLK" button) to be clicked for each line of G-code. This will allow you to step through your program one line at a time. You can move in and out of single block mode as necessary in your program. At the very least you should be in single block mode for a few lines after each tool change to make sure the speeds and feeds are reasonable and that the machine isn't going to crash.
+
+.. note:: The program can be paused at any time by clicking the "Feedhold" button located just below the "Single BLK" button or by pressing the space bar. Press "Cycle Start" to continue the program. Feedhold is not always instantaneous. If the machine is about to crash *always* use the emergency stop *never* feedhold.
+
+.. caution:: If feedhold is activated while in single block mode, when "Cycle Start" is pressed the machine will no longer be in single block mode *even though the blinking light indicates it is*. You will need to turn off single block and then turn it back on again.
+
+4. Often when running a program for the first time you will need to override the speeds and feeds set in your program. Speed and feed override controls can be found on middle and lower right side of the screen. Look for a capital letter "S" or "F" and a coresponding text box. The desired speed and feed can be entered in these text boxes while the program is running.
+
+.. note:: The speed controls in the :ref:`Mach3 software <mach3>` only work if the switch on the :ref:`front control panel <ctrlpan>` to the right of the silver RPM adjustment knob is switched to "Auto".
+
+5. After each M06 (tool change) in your program pause the tool as it's moving down by pressing the space bar, activating the feedhold. Double check to make sure that the numbers on the DRO, in your program, and in reality all roughly match. Use a tape measure to check if the bottom of the tool is the correct distance from your part. If the tool is not the correct distance from the part stop the program and debug it (don't forget, shop staff can help you debug the program).
+
+.. warning::  Feedhold has a couple second delay. If you need to stop the machine instantly use the e-stop. If the e-stop is pressed don't forget to re-reference the Z axis.
+
+6. As your program runs make notes about things that you might want to change (e.g. feeds, speeds, inefficient tool paths, etc.). When the program finishes return to your CAM software and make the changes.
+
+-------------------
+Rerunning a Program
+-------------------
+If your program has been changed since the first time you ran it, no matter how small the change, redo the above steps as though this is the first time you've run this program (because it is).
+
+If the program has not changed, install a new piece of stock and indicate it in following the steps outlined under :doc:`Locating Work <locating>`. If work stops are used in the setup not all coordinates will need to be indicated again. When the program finished it should have rewound back to the start of the program (if it didn't, click the "Program Reset" button on the middle left side of the screen). Single block mode can be turned off and you can now click "Cycle Start".

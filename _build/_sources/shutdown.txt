@@ -1,0 +1,14 @@
+Shutdown
+********
+
+.. warning:: It is essential that the following procedure is followed explicitly. Failure to do so can damage the machine
+
+---------
+Procedure
+---------
+
+1. Click the "x" in the upper right hand corner of the Mach3 CNC controller software. A dialog box will ask if you want to end the session. Select "yes". Two more dialog boxes may appear asking if you want to save the tool table and if you want to save fixtures. Select "yes" for both of them.
+#. You will now be at the Windows XP desktop. Go to the lower left corner, click "start", and then select "shutdown".
+#. On the front control panel press the red E-stop button.
+#. When the green power button on the monitor turns orange flip the computer switch on the front control panel to the off position.
+#. Rotate the yellow and red main power switch on the right side of the machine to the off position.

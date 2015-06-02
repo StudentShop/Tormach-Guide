@@ -1,0 +1,64 @@
+Loading Programs
+****************
+
+----------
+Background
+----------
+
+Automated machines are controlled using numerical control (NC). Although numerical control is most commonly implemented using a computer (CNC), it can also be implemented using other methods (e.g. mechanically via cams). The most common programming language for NC machines is G-code. Simply put, G-code is the language used to tell the machine how to move; in reality the language is more powerful than this simplistic description implies.
+
+Many modern CNC machines have standardized on Fanuc style G-code with slight variations. The variations in how the machine controllers interpret G-code means that G-code is rarely portable from one type of machine to another (similar to assembly language). CAM software helps alleviate this problem by automatically generating G-code based off a machine specific "post". As long as the CAM software has the correct post for the target machine, it can generate functioning G-code.
+
+For more information on G-code and NC machine programming see *CNC Programming Handbook: A Comprehensive Guide to Practical CNC Programming* by Peter Smid available through the library. For a full list of the codes available on the machine click the "G-codes" or "M-codes" buttons in the lower left corner of every screen below the "RESET" button.
+
+-----------------
+Generating G-Code
+-----------------
+
+1. In your CAM software make sure the correct post is selected. It should be either Tormach1100_3axis or Tormach1100_4axis depending on whether you are using 3 or 4 axis machining. This post was created by the shop. If your CAM software doesn't have these posts ask shop staff for help.
+2. Tell the software to generate the G-code, also called NC-code or machine code, for your part (this is often done by running a simulation of your part).
+3. Save the G-code generated to a USB flash drive making sure to give it a useful name.
+
+.. note:: G-code can also be written by hand however this is highly discouraged for individuals who have not been taught the proper methods (e.g. using program verification software). If you think you need hand written G-code for your part speak with shop staff first.
+
+--------------------
+Loading G-code files
+--------------------
+
+1. In the upper right hand corner of the Mach3 CNC control software select the "-" to minimize the screen. Minimize any other screens that may be up.
+#. Insert your usb flash drive into the the usb socket located on the right hand side of of the machine base.
+#. A dialog box should appear, select "open folder to view files". Failing this, navigate to your USB flash drive's folder (under My Computer).
+#. Copy the NC code you saved from FeatureCAM into the folder labeled "Code" on the desktop. You can now remove the usb flash drive.
+#. Maximize the Mach3 CNC control software by clicking on it at the bottom of the screen.
+#. In the upper left hand corner of the Mach3 CNC control software select "File" from the menu bar and then select "Load G-Code".
+#. Navigate to the "Code" folder on the desktop where you saved your NC code previously and select it.
+#. If you are on either the "Comp Run" or "Simple Run" screen you should now see your NC code (i.e. G-code) in the upper left hand side of the screen.
+
+----------------------------
+Minimum Recognizable G-code
+----------------------------
+
+There are a handful of G-codes you should be able to recognize as your program runs. Recognizing these will allow you to know what the machine will do before it does it. Being able to recognize these will help prevent crashes. It is also important to know that some G-codes are "modal" meaning that once they are activated they remain active until explicity turned off or changed (e.g. M08). For a full list of the codes available on the machine click the "G-codes" or "M-codes" buttons in the lower left corner of every screen below the "RESET" button.
+
+======================= ===================================================
+G-Code                  Action
+======================= ===================================================
+> G00                   Rapid Traverse e.g. G00 X1 Y1
+> G01                   Linear Motion at Feed Rate e.g. G01 Z-0.125 F15.5
+> G20/21                Inch/millimeter unit
+> G90/91                Absolute/Incremental Distance
+> M01                   Optional Program Stop
+> M03                   Spindle On, Clockwise e.g. S3000 M03 (turn the spindle on clockwise at 3000rpm)
+> M05                   Spindle Off
+> M06                   Tool Change e.g. T1 M06 (change to tool 1)
+> M08                   Flood Coolant On
+> M30                   End Program and Rewind
+======================= ===================================================
+
+-----------------------
+Manual Data Input (MDI)
+-----------------------
+
+Manual Data Input is a way for a machine operator to send g-code to the machine by manually entering them directly. This would allow the operator to, for example, tell the machine to move to a specific location, change a tool, etc. This is a very powerful feature and great care must be taken when using it. The MDI is located on both the "Simple Run" and "MDI" screens. It will appear as a text box labeled "MDI" on the lower part of the screen.
+
+.. caution:: It is extremely easy to crash the machine using the MDI. Never enter G-code into the MDI unless you know exactly what it will do.
