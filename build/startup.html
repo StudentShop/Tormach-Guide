@@ -1,0 +1,299 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Machine Startup &mdash; Tormach Guide 1.0 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Tormach Guide 1.0 documentation" href="index.html"/>
+        <link rel="next" title="Setting Up Tools" href="loadingtools.html"/>
+        <link rel="prev" title="Getting Started" href="gettingstarted.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="index.html" class="icon icon-home"> Tormach Guide
+        
+
+        
+        </a>
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="gettingstarted.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="gettingstarted.html#overview">Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="gettingstarted.html#front-control-panel">Front Control Panel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gettingstarted.html#mach3-cnc-controller-software">Mach3 CNC Controller Software</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gettingstarted.html#jog-controller">Jog Controller</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gettingstarted.html#automatic-tool-changer-atc">Automatic Tool Changer (ATC)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gettingstarted.html#reference-tool">Reference Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gettingstarted.html#tool-setter-probe">Tool Setter Probe</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gettingstarted.html#touch-probe">Touch Probe</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gettingstarted.html#tool-holders">Tool Holders</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gettingstarted.html#a-axis">A Axis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gettingstarted.html#tailstock">Tailstock</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gettingstarted.html#c-collet-adapter">5C Collet Adapter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gettingstarted.html#fogbuster">Fogbuster</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Machine Startup</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#procedure">Procedure</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="loadingtools.html">Setting Up Tools</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="loadingtools.html#loading-tools-into-tool-holders">Loading tools into tool holders</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loadingtools.html#loading-tools-into-the-atc-and-setting-tool-offsets">Loading tools into the ATC and setting tool offsets</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="locating.html">Locating Work</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="locating.html#setting-z">Setting Z</a></li>
+<li class="toctree-l2"><a class="reference internal" href="locating.html#finding-a-corner-on-square-stock">Finding a corner on Square Stock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="locating.html#finding-center-on-square-stock">Finding Center on Square Stock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="locating.html#finding-center-on-round-stock">Finding Center on Round Stock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="locating.html#finding-the-center-of-a-bore">Finding the center of a bore</a></li>
+<li class="toctree-l2"><a class="reference internal" href="locating.html#locating-unusually-shaped-work">Locating unusually shaped work</a></li>
+<li class="toctree-l2"><a class="reference internal" href="locating.html#reverse-engineering-work">Reverse engineering work</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="loadingprograms.html">Loading Programs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="loadingprograms.html#background">Background</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loadingprograms.html#generating-g-code">Generating G-Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loadingprograms.html#loading-g-code-files">Loading G-code files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loadingprograms.html#minimum-recognizable-g-code">Minimum Recognizable G-code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loadingprograms.html#manual-data-input-mdi">Manual Data Input (MDI)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="runningprograms.html">Running Programs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="runningprograms.html#preparation">Preparation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="runningprograms.html#running-a-program-for-the-first-time">Running a Program for the First Time</a></li>
+<li class="toctree-l2"><a class="reference internal" href="runningprograms.html#rerunning-a-program">Rerunning a Program</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="aaxis.html">Using the A-axis</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="aaxis.html#installing-the-a-axis">Installing the A-axis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aaxis.html#setup">Setup</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="cleanup.html">Cleanup</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cleanup.html#procedure">Procedure</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="shutdown.html">Shutdown</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="shutdown.html#procedure">Procedure</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="hazards.html">Hazards</a></li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#issue-the-computer-doesnt-turn-on">Issue: The computer doesn’t turn on.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#issue-a-dialog-box-says-atc-unable-to-find-atc-on-usb-ports-reconnect-usb-cable-try-again">Issue: A dialog box says: “ATC: Unable to find ATC on USB ports. Reconnect USB cable Try Again?”</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#issue-a-dialog-box-says-limit-switch-triggered">Issue: A dialog box says: “Limit Switch Triggered”</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#issue-a-dialog-box-says-atc-ok-to-reference-z-now">Issue: A dialog box says: “ATC: OK to Reference Z now?”</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#issue-the-green-light-doesnt-come-on-when-the-probe-is-pressed-on">Issue: The green light doesn’t come on when the probe is pressed on.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#issue-a-dialog-box-says-atc-warning-spindle-should-be-empty">Issue: A dialog box says: &#8220;ATC: Warning spindle should be empty...&#8221;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#issue-the-problem-is-not-covered-in-the-troubleshooting-section">Issue: The problem is not covered in the troubleshooting section</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#issue-the-mach3-cnc-controller-software-crashed-was-shutdown-by-mistake">Issue: The Mach3 CNC Controller software crashed/was shutdown by mistake</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#issue-a-dialog-box-says-atc-remove-99-from-spindle-press-ok-when-done-or-cancel-to-stop">Issue: A dialog box says: “ATC: Remove 99 from spindle Press OK when done or CANCEL to STOP”</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#issue-a-dialog-box-says-atc-paused-hit-ok-to-resume">Issue: A dialog box says: “ATC: Paused Hit OK to resume...”</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#after-touching-off-the-probe-the-red-light-on-the-probe-remains-on">After touching off the probe the red light on the probe remains on</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#a-message-is-displayed-next-to-the-reset-button-saying-probe-asked-to-move-too-far">A message is displayed next to the &#8220;RESET&#8221; button saying &#8220;Probe asked to move too far&#8221;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#a-message-is-displayed-next-to-the-reset-button-saying-face-not-found-start-too-far-away-or-z-not-low-enough">A message is displayed next to the &#8220;RESET&#8221; button saying &#8220;**** Face not found. Start too far away or Z not low enough&#8221;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#a-message-is-displayed-next-to-the-reset-button-saying-atc-button-tray-in-failure-retracting">A message is displayed next to the &#8220;RESET&#8221; button saying &#8220;ATC Button - Tray in failure - retracting&#8221;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#a-message-is-displayed-next-to-the-reset-button-saying-atc-m6-io-operation-failure">A message is displayed next to the &#8220;RESET&#8221; button saying &#8220;ATC M6 - IO operation failure&#8221;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#a-message-is-displayed-next-to-the-reset-button-saying-tool-not-in-tray">A message is displayed next to the &#8220;RESET&#8221; button saying &#8220;Tool not in tray&#8221;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#after-loading-your-g-code-the-machine-jumps-to-a-random-line-of-code-with-your-program-name-and-m98">After loading your G-code the machine jumps to a random line of code with your program name and M98</a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Tormach Guide</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Machine Startup</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/startup.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="machine-startup">
+<h1>Machine Startup<a class="headerlink" href="#machine-startup" title="Permalink to this headline">¶</a></h1>
+<div class="admonition caution">
+<p class="first admonition-title">Caution</p>
+<p class="last">A number of the operations in the procedure below will cause the machine to move automatically. If for any reason the machine starts to do something unintended hit the large red emergency stop button on the front control panel.</p>
+</div>
+<div class="section" id="procedure">
+<span id="startupprocedure"></span><h2>Procedure<a class="headerlink" href="#procedure" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>Rotate the main power switch, the red and yellow rotary switch on the side of the machine to the on position.</li>
+<li>On the <a class="reference internal" href="gettingstarted.html#ctrlpan"><span>front control panel</span></a> flip the computer switch to the on position.</li>
+<li>Ensure that the other switches on the front control panel are in a sensible position (e.g. the coolant switch isn’t turned on).</li>
+<li>Deactivate the emergency stop button by twisting to the right and pulling then press the green start button.</li>
+<li>The computer and control software should be loaded and waiting.</li>
+<li>A dialog box will appear and ask “ATC: OK to RESET?”  Click “Yes” in the dialog box. If the dialog box does not show this see <a class="reference internal" href="troubleshooting.html#issue2"><span>Troubleshooting</span></a>.</li>
+<li>A dialog box will appear and ask “ATC: OK to Reference Z now?” Make sure the Z-axis is clear to move and then click “Yes” in the dialog box. The Z-axis will now reference itself by moving to its positive limit switch.</li>
+<li>Go to the “Comp Run” screen by clicking the button labeled “Comp Run” at the bottom of the screen then click the “Ref XYZ” button near the DRO (digital readout) above the large black box. All three axes will now move. Y and Z will move in the positive direction to the limit switches, X will move in the negative direction to the limit switch.</li>
+</ol>
+<div class="admonition caution">
+<p class="first admonition-title">Caution</p>
+<p class="last">Do not click “Ref A”. When the button is clicked the A axis will rotate infinitely. If you do click the button by mistake press the “esc” key on the keyboard. “Ref A” assumes a limit switch is connected which it isn’t.</p>
+</div>
+<ol class="arabic simple" start="9">
+<li>If the <a class="reference internal" href="gettingstarted.html#axis"><span>4th axis rotary table (A axis)</span></a> is connected it also needs to have a zero and correction radius set. Using the <a class="reference internal" href="gettingstarted.html#jogctrl"><span>jog controller</span></a> rotate the A-axis to the zero position on the graduated markings on the axis itself, not on the DRO. Then click the “Zero” button for the A axis DRO (Digital Readout). Below the &#8220;Zero&#8221; button for the A-axis is a text box labeled &#8220;A correction radius&#8221;. Enter the radius of your part in this box and hit enter. If you need to install the A axis see the section titled <a class="reference internal" href="aaxis.html"><em>Installing the A axis</em></a>.</li>
+<li>In order to engage the spindle you will need to get the spindle lockout key from shop staff. The lockout key is inserted on the machine’s front control panel.</li>
+<li>The machine is now ready for use.</li>
+<li>It is a good idea at this point to practice moving the axes with the <a class="reference internal" href="gettingstarted.html#jogctrl"><span>jog controller</span></a>. To move away from the stops move in the negative y &amp; z directions and the positive x direction. The controller can be turned off or have its top speed reduced if necessary. The jog on/off control can be found in the upper right hand corner of the &#8220;Simple Run&#8221; and &#8220;Comp Run&#8221; screens. Slightly below that button is a text box labeled &#8220;Slow Jog Rate&#8221;. Typing in a lower percent of top speed will limit the jog controller to that percent top speed.</li>
+</ol>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">If at any point you hit one of the limit switches when using the jog controller all of your machine zeros will be lost. This is also the case if the emergency stop button or &#8220;RESET&#8221; buttons are pressed. You will have to click the reset button, move the machine off of the limit switch and then repeat the above steps. Running the machine without machine zeros being set can cause the machine to crash.</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="loadingtools.html" class="btn btn-neutral float-right" title="Setting Up Tools" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="gettingstarted.html" class="btn btn-neutral" title="Getting Started" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2013, Board of Regents of the University of Wisconsin System.
+      Last updated on Jun 05, 2015.
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -1,0 +1,334 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Getting Started &mdash; Tormach Guide 1.0 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Tormach Guide 1.0 documentation" href="index.html"/>
+        <link rel="next" title="Machine Startup" href="startup.html"/>
+        <link rel="prev" title="Tormach PCNC1100 Quick Start Guide" href="index.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="index.html" class="icon icon-home"> Tormach Guide
+        
+
+        
+        </a>
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#front-control-panel">Front Control Panel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#mach3-cnc-controller-software">Mach3 CNC Controller Software</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#jog-controller">Jog Controller</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#automatic-tool-changer-atc">Automatic Tool Changer (ATC)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#reference-tool">Reference Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tool-setter-probe">Tool Setter Probe</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#touch-probe">Touch Probe</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tool-holders">Tool Holders</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#a-axis">A Axis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tailstock">Tailstock</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#c-collet-adapter">5C Collet Adapter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fogbuster">Fogbuster</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="startup.html">Machine Startup</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="startup.html#procedure">Procedure</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="loadingtools.html">Setting Up Tools</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="loadingtools.html#loading-tools-into-tool-holders">Loading tools into tool holders</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loadingtools.html#loading-tools-into-the-atc-and-setting-tool-offsets">Loading tools into the ATC and setting tool offsets</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="locating.html">Locating Work</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="locating.html#setting-z">Setting Z</a></li>
+<li class="toctree-l2"><a class="reference internal" href="locating.html#finding-a-corner-on-square-stock">Finding a corner on Square Stock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="locating.html#finding-center-on-square-stock">Finding Center on Square Stock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="locating.html#finding-center-on-round-stock">Finding Center on Round Stock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="locating.html#finding-the-center-of-a-bore">Finding the center of a bore</a></li>
+<li class="toctree-l2"><a class="reference internal" href="locating.html#locating-unusually-shaped-work">Locating unusually shaped work</a></li>
+<li class="toctree-l2"><a class="reference internal" href="locating.html#reverse-engineering-work">Reverse engineering work</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="loadingprograms.html">Loading Programs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="loadingprograms.html#background">Background</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loadingprograms.html#generating-g-code">Generating G-Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loadingprograms.html#loading-g-code-files">Loading G-code files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loadingprograms.html#minimum-recognizable-g-code">Minimum Recognizable G-code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loadingprograms.html#manual-data-input-mdi">Manual Data Input (MDI)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="runningprograms.html">Running Programs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="runningprograms.html#preparation">Preparation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="runningprograms.html#running-a-program-for-the-first-time">Running a Program for the First Time</a></li>
+<li class="toctree-l2"><a class="reference internal" href="runningprograms.html#rerunning-a-program">Rerunning a Program</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="aaxis.html">Using the A-axis</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="aaxis.html#installing-the-a-axis">Installing the A-axis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aaxis.html#setup">Setup</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="cleanup.html">Cleanup</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cleanup.html#procedure">Procedure</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="shutdown.html">Shutdown</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="shutdown.html#procedure">Procedure</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="hazards.html">Hazards</a></li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#issue-the-computer-doesnt-turn-on">Issue: The computer doesn’t turn on.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#issue-a-dialog-box-says-atc-unable-to-find-atc-on-usb-ports-reconnect-usb-cable-try-again">Issue: A dialog box says: “ATC: Unable to find ATC on USB ports. Reconnect USB cable Try Again?”</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#issue-a-dialog-box-says-limit-switch-triggered">Issue: A dialog box says: “Limit Switch Triggered”</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#issue-a-dialog-box-says-atc-ok-to-reference-z-now">Issue: A dialog box says: “ATC: OK to Reference Z now?”</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#issue-the-green-light-doesnt-come-on-when-the-probe-is-pressed-on">Issue: The green light doesn’t come on when the probe is pressed on.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#issue-a-dialog-box-says-atc-warning-spindle-should-be-empty">Issue: A dialog box says: &#8220;ATC: Warning spindle should be empty...&#8221;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#issue-the-problem-is-not-covered-in-the-troubleshooting-section">Issue: The problem is not covered in the troubleshooting section</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#issue-the-mach3-cnc-controller-software-crashed-was-shutdown-by-mistake">Issue: The Mach3 CNC Controller software crashed/was shutdown by mistake</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#issue-a-dialog-box-says-atc-remove-99-from-spindle-press-ok-when-done-or-cancel-to-stop">Issue: A dialog box says: “ATC: Remove 99 from spindle Press OK when done or CANCEL to STOP”</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#issue-a-dialog-box-says-atc-paused-hit-ok-to-resume">Issue: A dialog box says: “ATC: Paused Hit OK to resume...”</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#after-touching-off-the-probe-the-red-light-on-the-probe-remains-on">After touching off the probe the red light on the probe remains on</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#a-message-is-displayed-next-to-the-reset-button-saying-probe-asked-to-move-too-far">A message is displayed next to the &#8220;RESET&#8221; button saying &#8220;Probe asked to move too far&#8221;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#a-message-is-displayed-next-to-the-reset-button-saying-face-not-found-start-too-far-away-or-z-not-low-enough">A message is displayed next to the &#8220;RESET&#8221; button saying &#8220;**** Face not found. Start too far away or Z not low enough&#8221;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#a-message-is-displayed-next-to-the-reset-button-saying-atc-button-tray-in-failure-retracting">A message is displayed next to the &#8220;RESET&#8221; button saying &#8220;ATC Button - Tray in failure - retracting&#8221;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#a-message-is-displayed-next-to-the-reset-button-saying-atc-m6-io-operation-failure">A message is displayed next to the &#8220;RESET&#8221; button saying &#8220;ATC M6 - IO operation failure&#8221;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#a-message-is-displayed-next-to-the-reset-button-saying-tool-not-in-tray">A message is displayed next to the &#8220;RESET&#8221; button saying &#8220;Tool not in tray&#8221;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#after-loading-your-g-code-the-machine-jumps-to-a-random-line-of-code-with-your-program-name-and-m98">After loading your G-code the machine jumps to a random line of code with your program name and M98</a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Tormach Guide</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Getting Started</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/gettingstarted.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="getting-started">
+<h1>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h1>
+<p>Before using the machine fully read and understand the material covered in this guide. This guide is not a replacement to the full documenation provided by Tormach. If you have any questions please ask one of the <a class="reference external" href="http://coestudentshop.engr.wisc.edu/about/staff.php">shop staff</a>.</p>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>The Tormach PCNC 1100 is intended for small work. The machine&#8217;s X, Y, Z limits are 18&#8221; x 9.5&#8221; x 16.25&#8221; (457mm x 241mm x 419mm) and the table size is 34&#8221; x 9.5&#8221; (864mm x 241mm). The machine has a spindle speed range of 100 to 5140 RPM with a maximum feed rate of 110 IPM (2794 mm/m) in the X &amp; Y axis and 90 IPM (2286 mm/m) in the Z axis. If you need a machine that is capable of handling larger work consider the HAAS VM (capable of doing 5-axis work) or Trak DPM.</p>
+<img alt="_images/pcnc1100.jpg" class="align-center" src="_images/pcnc1100.jpg" />
+<div class="section" id="front-control-panel">
+<span id="ctrlpan"></span><h3>Front Control Panel<a class="headerlink" href="#front-control-panel" title="Permalink to this headline">¶</a></h3>
+<img alt="_images/ctrlpan.jpg" src="_images/ctrlpan.jpg" />
+<p>The front control panel is where a number of important machine controls are located. This includes the start button, emergency stop, computer on/off, coolant on/off and a number of spindle controls. You should familarize yourself with these controls and their location.</p>
+</div>
+<div class="section" id="mach3-cnc-controller-software">
+<span id="mach3"></span><h3>Mach3 CNC Controller Software<a class="headerlink" href="#mach3-cnc-controller-software" title="Permalink to this headline">¶</a></h3>
+<img alt="_images/mach3.jpg" src="_images/mach3.jpg" />
+<p>The Mach3 CNC controller software is the main interface used to interact with the machine. Tormach&#8217;s full documentation can be found here: <a class="reference download internal" href="_downloads/mach3man.pdf"><code class="xref download docutils literal"><span class="pre">Mach3</span> <span class="pre">CNC</span> <span class="pre">Controller</span> <span class="pre">Software</span> <span class="pre">Manual</span></code></a>.</p>
+</div>
+<div class="section" id="jog-controller">
+<span id="jogctrl"></span><h3>Jog Controller<a class="headerlink" href="#jog-controller" title="Permalink to this headline">¶</a></h3>
+<img alt="_images/jogctrl.jpg" src="_images/jogctrl.jpg" />
+<p>The jog controller is the main method used to move the machine. First click the button for the axis you want then use the dials in the center of the controller to control the movement. There are two dials, an inner one and an outer one. The outer dial is for fast movements and the inner dial is for slow movements (roughly one motor step at a time). The default maximum travel speed is set in the Mach3 CNC control software.</p>
+</div>
+<div class="section" id="automatic-tool-changer-atc">
+<span id="atc"></span><h3>Automatic Tool Changer (ATC)<a class="headerlink" href="#automatic-tool-changer-atc" title="Permalink to this headline">¶</a></h3>
+<img alt="_images/atc.jpg" src="_images/atc.jpg" />
+<p>The ATC is used to store and load tools automatically. To insert and remove tools into the spindle use the black control box shown in the picture.</p>
+</div>
+<div class="section" id="reference-tool">
+<span id="reftool"></span><h3>Reference Tool<a class="headerlink" href="#reference-tool" title="Permalink to this headline">¶</a></h3>
+<img alt="_images/reftool.jpg" src="_images/reftool.jpg" />
+<p>The reference tool is used to calibrate the toolsetter when setting tool lengths.</p>
+</div>
+<div class="section" id="tool-setter-probe">
+<span id="toolset"></span><h3>Tool Setter Probe<a class="headerlink" href="#tool-setter-probe" title="Permalink to this headline">¶</a></h3>
+<img alt="_images/toolset.jpg" src="_images/toolset.jpg" />
+<p>The tool setter probe is used to measure and record the lengths of tools to be used. It is essential when running a cnc program that the machine has tool lengths set so that it knows where the tools are in relation to the work.</p>
+</div>
+<div class="section" id="touch-probe">
+<span id="probe"></span><h3>Touch Probe<a class="headerlink" href="#touch-probe" title="Permalink to this headline">¶</a></h3>
+<img alt="_images/probe.jpg" src="_images/probe.jpg" />
+<p>The touch probe is used to locate the work on the machine in the x, y, and z axes. It&#8217;s mechanical equivalent is the <a class="reference external" href="http://en.wikipedia.org/wiki/Edge_finder">edgefinder</a>. The touch probe can also be used to digitize the shape of an object, useful for reverse engineering.</p>
+</div>
+<div class="section" id="tool-holders">
+<span id="toolholder"></span><h3>Tool Holders<a class="headerlink" href="#tool-holders" title="Permalink to this headline">¶</a></h3>
+<img alt="_images/toolholder.jpg" src="_images/toolholder.jpg" />
+<p>Tormach uses a special tool holding system, called TTS, in place of R8 collets (although the machine can accept R8 collets if the ATC is not attached). Tormach&#8217;s full documentation can be found here: <a class="reference download internal" href="_downloads/ttsman1.pdf"><code class="xref download docutils literal"><span class="pre">TTS</span> <span class="pre">Manual</span></code></a> and <a class="reference download internal" href="_downloads/toolholding.pdf"><code class="xref download docutils literal"><span class="pre">Preventing</span> <span class="pre">Collet</span> <span class="pre">Slip</span></code></a>.</p>
+</div>
+<div class="section" id="a-axis">
+<span id="axis"></span><h3>A Axis<a class="headerlink" href="#a-axis" title="Permalink to this headline">¶</a></h3>
+<img alt="_images/axis.jpg" src="_images/axis.jpg" />
+<p>The machine can have a 4th axis added to it. This is referred to as the A axis. Workpieces can be attached directly to the face of the A axis. A chuck or <a class="reference internal" href="#colletholder"><span>collet adapter</span></a> can also be attached to the axis to hold work. Tormach&#8217;s full documentation can be found here: <a class="reference download internal" href="_downloads/axisman.pdf"><code class="xref download docutils literal"><span class="pre">4th</span> <span class="pre">Axis</span> <span class="pre">Manual</span></code></a>.</p>
+</div>
+<div class="section" id="tailstock">
+<span id="tail"></span><h3>Tailstock<a class="headerlink" href="#tailstock" title="Permalink to this headline">¶</a></h3>
+<img alt="_images/tail.jpg" src="_images/tail.jpg" />
+<p>The tailstock can be used in conjunction with the A axis to support long material.</p>
+</div>
+<div class="section" id="c-collet-adapter">
+<span id="colletholder"></span><h3>5C Collet Adapter<a class="headerlink" href="#c-collet-adapter" title="Permalink to this headline">¶</a></h3>
+<img alt="_images/colletholder.jpg" src="_images/colletholder.jpg" />
+<p>The 5C collet adapter can be attached to the face of the A-axis for holding work as well as bolted to the table of the machine or clamped in a vise.</p>
+</div>
+<div class="section" id="fogbuster">
+<span id="fog"></span><h3>Fogbuster<a class="headerlink" href="#fogbuster" title="Permalink to this headline">¶</a></h3>
+<img alt="_images/fog.jpg" src="_images/fog.jpg" />
+<p>The Fogbuster is a mist coolant system. It can be used as an alternative to the built-in flood coolant system. The Fogbuster is ideal for operations that don&#8217;t require full flood coolant but where cutting oil alone may be insufficient. The Fogbuster requires less clean up than the flood coolant.</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="startup.html" class="btn btn-neutral float-right" title="Machine Startup" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Tormach PCNC1100 Quick Start Guide" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2013, Board of Regents of the University of Wisconsin System.
+      Last updated on Jun 05, 2015.
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
