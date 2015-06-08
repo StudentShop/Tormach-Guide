@@ -2,7 +2,7 @@
 
 ## What is it?
 
-This guide (created with the [Sphinx Python Documentation Generator](http://sphinx-doc.org/index.html)) gives detailed, step-by-step instructions for running a Tormach PCNC 1100 with an automatic tool changer and A-axis (a.k.a. fourth axis). It is designed so that a student who has never run the machine (but has elementary knowledge of 2-axis CNC milling machines) can run the machine by themselves mostly unassisted. The only point at which an instructor needs to intervene is when the student is ready to run their part in order to verify everything is correct (this crucial step is included in the guide) or to answer questions.
+This guide (created with the [Sphinx Python Documentation Generator](http://sphinx-doc.org/index.html)) gives detailed, step-by-step instructions for running a Tormach PCNC 1100 with an automatic tool changer and A-axis (a.k.a. fourth axis). It is designed so that a student who has never run the machine (but has elementary knowledge of 2-axis CNC milling machines) can run the machine by themselves mostly unassisted. The only point at which an instructor needs to intervene is to do a safety/problems check just prior to the student running their part (this crucial step is included in the guide) or to answer questions.
 
 ## Installation
 
@@ -29,7 +29,7 @@ It is also possible to compile this guide into a PDF. See the [Sphinx documentat
 ## Known Issues
 See [Issues List](https://github.com/StudentShop/Tormach-Guide/issues).
 
-If you discover any errors, feel free to create an issue on GitHub. If you would like to contribute a fix or add additional information to the guide see [Contributing](https://github.com/StudentShop/Tormach-Guide/blob/master/README.md#contributing) below.
+If you discover any errors, feel free to [create an issue](https://github.com/StudentShop/Tormach-Guide/issues/new) on GitHub. If you would like to contribute a fix or add additional information to the guide see [Contributing](https://github.com/StudentShop/Tormach-Guide/blob/master/README.md#contributing) below.
 
 ## Author
 
